@@ -101,6 +101,34 @@ p{color:var(--muted)}
 .hero-trust .dot{width:9px;height:9px;border-radius:50%;background:var(--teal)}
 .hero-art{position:relative}
 
+/* ---------- Two-col hero split (home page) ---------- */
+.hero-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
+  padding:64px 0 90px;
+}
+.hero-split-text{text-align:left}
+.hero-logo-sm{
+  width:auto;max-width:220px;height:auto;
+  display:block;margin:0 0 22px;
+}
+.hero-split .lead-light{margin:20px 0 30px;max-width:none}
+.hero-photo-main{
+  width:100%;height:auto;display:block;
+  border-radius:18px;
+  box-shadow:0 24px 64px rgba(0,0,0,.50);
+}
+@media(max-width:900px){
+  .hero-split{grid-template-columns:1fr;gap:32px;padding:40px 0 60px}
+  .hero-split-photo{order:-1}
+  .hero-logo-sm{margin:0 auto 22px}
+  .hero-split-text{text-align:center}
+  .hero-split .hero-cta{justify-content:center}
+  .hero-split .hero-trust{justify-content:center}
+}
+
 /* ---------- Dark hero that graduates to light ---------- */
 .hero-dark{
   background:linear-gradient(180deg,
